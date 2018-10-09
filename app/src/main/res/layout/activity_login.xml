@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash"
+        />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:id="@+id/ltDefault"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".5"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center"
+                            android:text="RTM"
+                            android:textSize="60dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center"
+                            android:text="REMEDIATION"
+                            android:textSize="20dp"
+                            android:textColor="@color/lightWhite"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center"
+                            android:text="TRACKING"
+                            android:textSize="20dp"
+                            android:textColor="@color/lightWhite"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center"
+                            android:text="MODULE"
+                            android:textSize="20dp"
+                            android:textColor="@color/lightWhite"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="50dp"
+                        android:layout_height="2px"
+                        android:background="@color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".5"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#30ffffff"
+                            android:layout_marginBottom="5dp"
+                            android:textColorHint="@color/white"
+                            app:hintTextAppearance="@style/EditTextHint">
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/txtUserName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:hint="User ID"
+                                app:met_baseColor="@color/white"
+                                app:met_primaryColor="@color/white"
+                                app:met_textColor="@color/white"
+                                app:met_textColorHint="#33ff0000"
+                                app:met_helperTextColor="#795548"
+                                app:met_underlineColor="@color/white"
+                                app:met_floatingLabelTextColor="#8805ad"
+                                android:textColor="@color/white"
+                                app:met_iconLeft="@drawable/ic_people_outline_white_24dp"
+                                app:met_iconPadding="0dp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:imeOptions="actionNext"
+                                android:singleLine="true"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#30ffffff"
+                            android:textColorHint="@color/white"
+                            app:hintTextAppearance="@style/EditTextHint">
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/txtPasswordForLogin"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-condensed"
+                                android:hint="Password"
+                                android:inputType="textPassword"
+                                android:textColor="@color/white"
+                                app:met_baseColor="@color/white"
+                                app:met_floatingLabelTextColor="#8805ad"
+                                app:met_helperTextColor="@color/white"
+                                app:met_iconLeft="@drawable/ic_lock_outline_white_24dp"
+                                app:met_iconPadding="0dp"
+                                app:met_primaryColor="@color/white"
+                                app:met_textColor="@color/white"
+                                app:met_textColorHint="@color/white"
+                                app:met_underlineColor="@color/white"
+                                android:imeOptions="actionDone"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp">
+
+                            <CheckBox
+                                android:id="@+id/chkRememberMe"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text=" Remember me"
+                                android:textColor="@color/white"
+                                android:layout_weight=".5"
+                                android:buttonTint="@color/white"
+                                android:textSize="15sp"/>
+
+                            <Button
+                                android:id="@+id/btnLogin"
+                                android:layout_width="0dp"
+                                android:layout_height="60dp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:text="@string/login"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:layout_weight=".4"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>
